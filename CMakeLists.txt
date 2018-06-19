@@ -3,4 +3,4 @@ project(d00)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(d00 main.cpp PhoneBook.cpp PhoneBook.hpp)
+add_executable(d00 main.cpp main.cpp Account.class.cpp)
