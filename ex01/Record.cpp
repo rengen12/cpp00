@@ -1,6 +1,14 @@
-//
-// Created by proger on 19.06.18.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Record.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amichak <amichak@student.unit.ua>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/18 20:55:00 by amichak           #+#    #+#             */
+/*   Updated: 2018/06/18 20:55:00 by amichak          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Record.hpp"
 
@@ -63,15 +71,15 @@ void    Record::printBrief() {
 }
 
 void    Record::printFull() {
-    std::cout << firstName << std::endl;
-    std::cout << lastName << std::endl;
-    std::cout << nickname << std::endl;
-    std::cout << login << std::endl;
-    std::cout << postalAddress << std::endl;
-    std::cout << email << std::endl;
-    std::cout << phoneNumber << std::endl;
-    std::cout << birthdayDate << std::endl;
-    std::cout << favoriteMeal << std::endl;
-    std::cout << underwearColor << std::endl;
-    std::cout << darkestSecret << std::endl;
+    std::cout << "firstname: " << firstName << std::endl;
+    std::cout << "lastname: " << lastName << std::endl;
+    std::cout << "nickname: " << nickname << std::endl;
+    std::cout << "login: " << login << std::endl;
+    std::cout << "postal address: " << postalAddress << std::endl;
+    std::cout << "email: " << email << std::endl;
+    std::cout << "phone number: " << phoneNumber << std::endl;
+    std::cout << "birthday date: " << birthdayDate << std::endl;
+    std::cout << "favorite meal: " << favoriteMeal << std::endl;
+    std::cout << "underwear color: " << underwearColor << std::endl;
+    std::cout << "darkest secret: " << darkestSecret << std::endl;
 }

@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "PhoneBook.hpp"
 
 int main() {
@@ -19,18 +18,15 @@ int main() {
 
 	while (1) {
 		std::cout << "Enter command (ADD, SEARCH or EXIT): ";
-//		std::cin >> buf;
 		std::getline(std::cin, buf);
-		std::cout << std::endl;
 
-		if (buf == "ADD")
+		if (feof(stdin) || buf == "EXIT") {
+			std::cout << "EXIT" << std::endl;
+			break;
+		} else if (buf == "ADD")
 			phoneBook.add();
 		else if (buf == "SEARCH")
 			phoneBook.search();
-		else if (buf == "EXIT") {
-			std::cout << "EXIT" << std::endl;
-			break;
-		}
 		else
 			std::cout << "Unrecognized command. Try again" << std::endl;
 	}

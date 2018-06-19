@@ -28,18 +28,21 @@ void PhoneBook::add() {
 }
 
 void PhoneBook::search() {
-    int     index;
+    std::string	index;
 
-    std::cout << std::setw(10) << "index" << '|' << std::setw(10) << "first name"
-              << '|' << std::setw(10) << "last name" << '|' << std::setw(10)
-              << "nickname" << std::endl;
-    for (int i = 0; i < numRecords; i++) {
-        record[i].printBrief();
+    if (numRecords == 0) {
+        std::cout << "No records" << std::endl;
+        return;
     }
+    std::cout << std::setw(10) << "index" << '|' << std::setw(10)
+              << "first name" << '|' << std::setw(10) << "last name" << '|'
+              << std::setw(10) << "nickname" << std::endl;
+    for (int i = 0; i < numRecords; i++)
+        record[i].printBrief();
     std::cout << "Enter index to get full info: ";
-    std::cin >> index;
-    if (index >= 0 && index < numRecords) {
-        record[index].printFull();
-    } else
+	std::getline(std::cin, index);
+    if (index.size() == 1 && index[0] >= 48 && index[0] < numRecords + 48)
+        record[index[0] - 48].printFull();
+    else
         std::cout << "Wrong index!" << std::endl;
 }
